@@ -10,7 +10,7 @@ const swaggerOptions: Options = {
         },
         servers: [
             {
-                url: 'https://https://speer-backend-p40p.onrender.com/',
+                url: 'https://speer-backend-p40p.onrender.com/',
                 description: 'Production server'
             },
             {
