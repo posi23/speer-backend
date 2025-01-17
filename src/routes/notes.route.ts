@@ -6,7 +6,7 @@ const router = express.Router();
 
 /**
  * @swagger
- * /:
+ * /api/notes:
  *   post:
  *    summary: Create a new note
  *    requestBody:
@@ -47,7 +47,7 @@ router.post('/', authenticateToken, NotesController.createNote);
 
 /**
  * @swagger
- * /:
+ * /api/notes:
  *  get:
  *      summary: Get all notes for the authenticated user
  *      responses:
@@ -89,7 +89,7 @@ router.get('/', authenticateToken, NotesController.getAllNotes);
 
 /**
  * @swagger
- * /{id}:
+ * /api/notes/{id}:
  *  get:
  *      summary: Get a note by id
  *      parameters:
@@ -137,7 +137,7 @@ router.get('/:id', authenticateToken, authorizeNoteAccess, NotesController.getNo
 
 /**
  * @swagger
- * /{id}:
+ * /api/notes/{id}:
  *  put:
  *      summary: Update a note by id
  *      parameters:
@@ -188,7 +188,7 @@ router.put('/:id', authenticateToken, authorizeNoteOwner, NotesController.update
 
 /**
  * @swagger
- * /{id}/share:
+ * api/notes/{id}/share:
  *  post:
  *      summary: Share a note with another user
  *      parameters:
@@ -235,7 +235,7 @@ router.post('/:id/share', authenticateToken, authorizeNoteOwner, NotesController
 
 /**
  * @swagger
- * /{id}:
+ * /api/notes/{id}:
  *  delete:
  *      summary: Delete a note by id
  *      parameters:

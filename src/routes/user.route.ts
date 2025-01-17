@@ -6,7 +6,7 @@ const router = express.Router();
 
 /**
  * @swagger
- * /signup:
+ * /api/auth/signup:
  *   post:
  *     summary: 
  *      Sign up a new user
@@ -49,7 +49,7 @@ router.post('/signup',
 
 /**
  * @swagger
- * /login:
+ * /api/auth/login:
  *   post:
  *     summary: 
  *      Log in a user

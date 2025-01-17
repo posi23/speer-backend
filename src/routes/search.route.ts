@@ -6,7 +6,7 @@ const router = express.Router();
 
 /**
  * @swagger
- * /:
+ * /api/search:
  *  get:
  *     summary: Search notes
  *     parameters:
