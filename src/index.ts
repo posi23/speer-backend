@@ -13,6 +13,7 @@ import { NotesRoute, SearchRoute, UserRoute } from "./routes";
 dotenv.config();
 
 const app = express();
+app.set('trust proxy', true)
 connect(); // connect to the db
 app.use(express.json());
 app.use(cookieParser());
@@ -34,7 +35,7 @@ const speedLimiter = slowDown({
     message: 'You are sending requests too quickly. Please slow down.',
 });
 
-app.use('/api', speedLimiter, rateLimiter);
+app.use(speedLimiter, rateLimiter);
 
 const PORT = process.env.PORT || 3000;
 
