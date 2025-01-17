@@ -10,11 +10,16 @@ const swaggerOptions: Options = {
         },
         servers: [
             {
-                url: 'http://localhost:3000', // Update with your server URL
+                url: 'https://https://speer-backend-p40p.onrender.com/',
+                description: 'Production server'
             },
+            {
+                url: 'http://localhost:3000',
+                description: 'Development server'
+            }
         ],
     },
-    apis: ['./src/routes/*.ts'], // Path to your TypeScript API docs
+    apis: ['./src/routes/*.ts'],
 };
 
 export default swaggerOptions;
