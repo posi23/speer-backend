@@ -13,7 +13,7 @@ import { NotesRoute, SearchRoute, UserRoute } from "./routes";
 dotenv.config();
 
 const app = express();
-app.set('trust proxy', true)
+app.set('trust proxy', 1)
 connect(); // connect to the db
 app.use(express.json());
 app.use(cookieParser());
