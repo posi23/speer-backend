@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "target": "ES6",
+      "module": "CommonJS",
+      "outDir": "./dist",
+      "rootDir": "./src",
+      "strict": true,
+    "esModuleInterop": true
+      // other options
+    },
+    "include": ["src/**/*"],
+    "exclude": ["jest.config.ts", "src/swagger-config.ts"]
+  }
+  
