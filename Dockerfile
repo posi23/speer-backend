@@ -20,13 +20,3 @@ EXPOSE 3000
 # Run the app
 CMD ["npm", "start"]
 
-# # Default environment is production; override with build args
-# ARG NODE_ENV=production
-# ENV NODE_ENV=$NODE_ENV
-
-# # Install production dependencies only (for production builds)
-# RUN if [ "$NODE_ENV" = "production" ]; then npm prune --production; fi
-
-# # Default entrypoint based on NODE_ENV
-# ENTRYPOINT [ "sh", "-c", "if [ \"$NODE_ENV\" = \"test\" ]; then npm test; else npm start; fi" ]
-

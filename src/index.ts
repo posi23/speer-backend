@@ -6,8 +6,7 @@ import cookieParser from 'cookie-parser';
 import swaggerUi from 'swagger-ui-express';
 import swaggerJsdoc from 'swagger-jsdoc';
 import swaggerOptions from './swagger-config';
-import { pool, connect } from "./db";
-// import { pool } from "./db";
+import { connect } from "./db";
 import { NotesRoute, SearchRoute, UserRoute } from "./routes";
 
 dotenv.config();
@@ -42,18 +41,6 @@ const PORT = process.env.PORT || 3000;
 app.use('/api/auth', UserRoute);
 app.use('/api/notes', NotesRoute);
 app.use('/api/search', SearchRoute);
-
-// practice route
-app.get("/", (req: Request, res: Response) => {
-    pool.query('SELECT * FROM users', (err, result) => {
-        if (err) {
-            console.error(err);
-            res.status(500).send("Internal server error");
-        }
-        res.status(200).json(result.rows);
-    }
-    );
-});
 
 
 export const server = app.listen(PORT, () => {
