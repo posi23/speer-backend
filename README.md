@@ -39,7 +39,7 @@ To get started with the project, first, clone the repository:
 - git clone https://github.com/posi23/speer-backend.git
 - cd speer-backend
 
-### Environment Setup (See below on how to start this application in a dockerized environment)
+### Environment Setup
 Create a **.env** file in the root of the project to configure the environment variables. Example **.env**:
 - PORT=3000
 - DATABASE_URL=postgres://user:password@localhost:5432/speer
